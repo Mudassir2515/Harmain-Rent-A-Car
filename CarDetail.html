@@ -1,0 +1,816 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harmain Rent A Car | Car Rental Service</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <section>
+    <!-- Login Form -->
+    <div class="modal fade" id="login" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog bg-body-dark p-5" style="border-radius: 4.5rem;">
+        <div class="modal-content bg-body-tertiary">
+          <div class="modal-header justify-content-center border-dark">
+            <div class="row w-100">
+              <button type="button" class="btn-close pt-2 " data-bs-dismiss="modal" aria-label="Close"></button>
+              <h4>LOG IN</h4>
+              <form class="py-2">
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input type="email" class="form-control bg-body-tertiary"
+                      style="border-left: 0; border-radius:0 1rem 1rem 0;" required>
+                  </div>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="my-2">
+                  <label for="exampleInputPassword1" class="form-label fw-semibold">Password</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-lock"></i>
+                    </span>
+                    <input type="password" class="form-control bg-body-tertiary"
+                      style="border-right: 0;border-left: 0 ;" id="Password" required>
+                    <span class="input-group-text"
+                      style="cursor: pointer; border-left: 0; border-radius: 0 1rem 1rem 0;">
+                      <i id="eye" class="bi bi-eye" onclick="showPassword()"></i>
+                      <i id="eye-slash" class="bi bi-eye-slash" onclick="showPassword()" style="display: none;"></i>
+                    </span>
+                  </div>
+                  <div id="emailHelp" class="form-text"><a href="">Forget Password?</a></div>
+                  <script>
+                    function showPassword() {
+                      let x1 = document.getElementById("Password")
+                      let y1 = document.getElementById("eye")
+                      let z1 = document.getElementById("eye-slash")
+                      if (x.type === "password") {
+                        x.type = "text"
+                        y.style.display = "none"
+                        z.style.display = "block"
+                      } else {
+                        x.type = "password"
+                        y.style.display = "block"
+                        z.style.display = "none"
+                      }
+                    }
+                  </script>
+                </div>
+                <div class="text-center my-2 pt-2">
+                  <button type="submit" class="btn btn-lg fs-6"
+                    style="background-color: #E41E12;color: white; border-radius: 2rem;">Log
+                    In</button>
+                </div>
+                <div class="text-center my-2">
+                  <small id="emailHelp" class="form-text">Dont't have an account?<span><a
+                        href="SignUp.html">SignUp</a></span> </small>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-0">
+      <div class="container-fluid gradient" style="position: relative; padding:0 4rem 0 4rem; ">
+        <div class="row gx-5 w-100">
+          <div class="col-lg-6 d-flex justify-content-start">
+            <a class="navbar-brand ps-5" href="index.html">
+              <img src="images/harmain.png" style="height: 5rem;"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-end">
+            <div class="row">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1 " href="AboutUs.html" style="color: white;">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1" href="OurFleet.html" style="color: white;">OUR FLEET</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link fw-semibold px-1  dropdown-toggle" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                      CATEGORIES
+                    </a>
+                    <ul class="dropdown-menu border-0 gradient">
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=economy">Economy</a></li>
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=standard">Standard</a></li>
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=luxury">Luxury</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1  " href="ContactUs.html" style="color: white;">CONTACT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link fw-semibold px-1  pe-0" data-bs-toggle="modal"
+                      data-bs-target="#login" style="color: white;">
+                      LOGIN</button>
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1 P-0" href="" style="color: white;">
+                      |
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ps-0 fw-semibold" href="SignUp.html" style="color: white;"> SIGNUP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- Card -->
+  <section>
+    <div class="container" style="margin-top: 5rem;">
+      <div class="row">
+        <div class="col-lg-6 my-5 ">
+          <div class="row">
+            <div class="col-lg-8">
+              <h4 class="fw-bold text-uppercase my-auto" id="car_name">Car Name </h4>
+            </div>
+            <div class="col my-auto">
+              <span class="border" id="model_year" style="font-size: 1rem;">Model</span>
+            </div>
+          </div>
+          <div class="col w-100">
+            <div class="car border-0">
+              <div class="container-fluid">
+                <div class="row mb-3 d-flex justify-content-between">
+                  <div class="col-lg-4 text-center"
+                    style="width: 6.5rem; border-radius: .5rem; padding: .5rem .15rem .25rem .15rem;">
+                    <h4 class="fw-bold" id="car_price_month" style="color: #E41E12; margin-bottom: 0;">PRICE</h6>
+                      <h6 style="font-size: .85rem;">PKR/Month</h6>
+                  </div>
+                  <div class="col-lg-4 text-center"
+                    style="width: 6.5rem; border-radius: .5rem; padding: .5rem .15rem .25rem .15rem;">
+                    <h4 class="fw-bold" id="car_price_week" style="color: #E41E12; margin-bottom: 0;">PRICE</h6>
+                      <h6 style="font-size: .85rem;">PKR/Week</h6>
+                  </div>
+                  <div class="col-lg-4 text-center"
+                    style="width: 6.5rem; border-radius: .5rem; padding: .5rem .15rem .25rem .15rem;">
+                    <h4 class="fw-bold" id="car_price_day" style="color: #E41E12; margin-bottom: 0;">PRICE</h6>
+                      <h6 style="font-size: .85rem;">PKR/Day</h6>
+                  </div>
+                </div>
+                <div class="row">
+                  <p>+ 5% VAT applicable +Security Deposit
+                  </p>
+                </div>
+              </div>
+              <div class="row border-top border-dark">
+                <div class="col-lg-6 py-4">
+                  <button type="button" class="btn btn-lg btn-dark submitbtn" style=" width: 100%; height: 3.5rem;"
+                    data-bs-toggle="modal" data-bs-target="#inquiryModal" data-bs-whatever="@getbootstrap">
+                    <h6 class="my-1 mx-2" style="font-size: .75rem;">SEND INQUIRY</h6>
+                  </button>
+                  <div class="modal fade modalll" id="inquiryModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog bg-body-dark"
+                      style="border-radius: 4.5rem;margin-block-start: 0; margin-block-end: 0; ">
+                      <div class="modal-content bg-body-tertiary">
+                        <div class="modal-header justify-content-center border-dark">
+                          <div class="row w-100 gradient" style="border-radius: .5rem;">
+                            <button type="button" class="btn-close pt-2" data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                            <div class="col-lg-12 text-center">
+                              <img src="images/harmain.png" class=" img-fluid mb-3" style="width: 5rem; ">
+                            </div>
+                            <div class="col-lg-12 text-center">
+                              <img src="${card.card_image}" class="img-fluid text-center w-75 mb-2 card_image"
+                                style="border-radius: 1rem;">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <h3 class="text-center fw-semibold" id="modal_name">${card.car_name}<span class="fs-6 fw-"
+                              id="modal_model_year">${card.model_year}</span></h3>
+                          <div class="mb-1">
+                            <label class="col-form-label">Name</label>
+                            <input type="text" class="form-control bg-body-tertiary"
+                              style="border-radius: 2rem; border-color: black;" placeholder="Name" required>
+                          </div>
+                          <div class="mb-1">
+                            <label class="col-form-label">Email</label>
+                            <input type="email" class="form-control bg-body-tertiary"
+                              style="border-radius: 2rem; border-color: black;" placeholder="Email" required>
+                          </div>
+                          <div class="mb-1">
+                            <label class="col-form-label">Phone No</label>
+                            <input type="number" class="form-control bg-body-tertiary"
+                              style="border-radius: 2rem; border-color: black;" placeholder="Phone No" required>
+                          </div>
+                          <div class="mb-1">
+                            <label class="col-form-label">Message</label>
+                            <textarea name="Message"
+                              style="border-radius: 1.5rem; border-color: black;padding-top:.5rem;" cols="60" rows="3"
+                              class="bg-body-tertiary">I am interested in Car Name. Please call me back.</textarea>
+                          </div>
+                          <div class="row mt-4 text-center">
+                            <a href="ThankYouInquiry.html">
+                              <button type="submit" class="btn btn-lg fs-6"
+                                style="background-color: #E41E12;color: white; border-radius: 2rem;">Send
+                                message</button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 py-4">
+                  <button type="button" class="btn btn-lg btn-dark "
+                    style=" width: 100%; height: 3.5rem; background-color: #e41e12;" data-bs-toggle="modal"
+                    data-bs-target="#bookingModal" data-bs-whatever="@getbootstrap">
+                    <h6 class="my-1 mx-2" style="font-size: .75rem;"> BOOK NOW </h6>
+                  </button>
+                  <div class="modal fade modal-lg modalll" id="bookingModal" tabindex="-1"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" style="border-radius: 4.5rem;margin-block-start: 0; margin-block-end: 0;">
+                      <div class="modal-content px-3">
+                        <div class="modal-header justify-content-center border-dark bg-body-tertiary">
+                          <div class="row w-100 gradient" style="border-radius:.5rem">
+                            <button type="button" class="btn-close pt-2" data-bs-dismiss="modal"
+                              aria-label="Close"></button>
+                            <div class="col-lg-12 text-center">
+                              <img src="images/harmain.png" class=" img-fluid mb-3" style="width: 5rem; ">
+                            </div>
+                          </div>
+                        </div>
+                        <div class="modal-body">
+                          <h3 class="text-center fw-semibold" id="modal_namee">${card.car_name}<span class="fs-6 fw-">
+                              ${card.model_year}</span></h3>
+                          <div class="row">
+                            <div class="col mb-1">
+                              <label class="col-form-label">Name</label>
+                              <input type="text" class="form-control" style="border-radius: 2rem; border-color: black;"
+                                placeholder="Name" required>
+                            </div>
+                            <div class="col mb-1">
+                              <label class="col-form-label">Email</label>
+                              <input type="email" class="form-control" style="border-radius: 2rem; border-color: black;"
+                                placeholder="Email" required>
+                            </div>
+                          </div>
+                          <div class="mb-1">
+                            <label class="col-form-label">Phone No</label>
+                            <input type="number" class="form-control" style="border-radius: 2rem; border-color: black;"
+                              placeholder="Phone No" required>
+                          </div>
+                          <div class="row mb-1">
+                            <div class="col">
+                              <label class="col-form-label">From:</label>
+                              <input type="date" class="form-control" style="border-radius: 2rem; border-color: black;"
+                                required>
+                            </div>
+                          </div>
+                          <div class="row mb-1">
+                            <div class="col">
+                              <label class="col-form-label">To:</label>
+                              <input type="date" class="form-control" style="border-radius: 2rem; border-color: black;"
+                                required>
+                            </div>
+                          </div>
+
+                          <p class="mt-4">We guarantees best car rental experience at lowest possible rates ever. So,
+                            rent a car in Karachi through <span class="fw-semibold">Harmain Rent A Car</span>.</p>
+                          <p>Our well-groomed and professional drivers make sure your experience remains per
+                            excellence. Our whole process is secure, easy and with no hassle. Cars are always
+                            delivered at your doorstep.</p>
+                          <p>We encourage the visitors to book their favorite car in advance
+                            Bookings of all cars are subject to availability
+                            For urgent bookings please call our helpline.</p>
+                          <p>There are no hidden charges.</p>
+                          <p>Travel within Karachi and / or from Karachi to anywhere in Pakistan.</p>
+
+                          <div class="row mt-4 text-center">
+                            <a href="ThankYouBooking.html">
+                              <button type="submit" class="btn btn-lg fs-6"
+                                style="background-color: #E41E12;color: white; border-radius: 2rem;">Book Now</button>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col w-100">
+              <div class="container-fluid">
+                <div class="row pt-2 text-white " style="background-color: #E41E12; border-radius: 1.5rem;">
+                  <div class="col-lg-12 px-4">
+                    <div id="list-example" class="row">
+                      <div class="col-lg-3 text-center">
+                        <button class="list-group-item list-group-item-action text-uppercase fs-6 fw-semibold"
+                          onclick="specifications()"><small>Specifications</small></button>
+                      </div>
+                      <div class="col-lg-3 text-center">
+                        <button class="list-group-item list-group-item-action text-uppercase fs-6 fw-semibold"
+                          onclick="car_features()"><small>Car Features</small></button>
+                      </div>
+                      <div class="col-lg-3 text-center">
+                        <button class="list-group-item list-group-item-action text-uppercase fs-6 fw-semibold"
+                          onclick="includes()"><small>Includes</small></button>
+                      </div>
+                      <div class="col-lg-3 text-center">
+                        <button class="list-group-item list-group-item-action text-uppercase fs-6 fw-semibold"
+                          onclick="requirements()"><small>Requirements</small></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col w-100">
+                    <div class="row g-0" id="specifications">
+                      <div class="row m-auto">
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Model Year</td>
+                              <td id="specs_model_year"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Color</td>
+                              <td id="specs_car_color" style="text-align: end;background-color: #E41E12; color: white;">
+                                Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Engine</td>
+                              <td id="specs_car_engine"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Transmission</td>
+                              <td id="specs_car_transmission"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Make</td>
+                              <td id="specs_car_make" style="text-align: end;background-color: #E41E12; color: white;">
+                                Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Interior Color</td>
+                              <td id="specs_car_int_color"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Fuel</td>
+                              <td id="specs_car_fuel" style="text-align: end;background-color: #E41E12; color: white;">
+                                Petrol</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Body Type</td>
+                              <td id="specs_car_body_type"
+                                style="text-align: end;background-color: #E41E12; color: white;">Sedan</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Doors</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">4</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Seating Capacity</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">5 Persons</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Luggage</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">3</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">A/C</td>
+                              <td id="specs_car_ac" style="text-align: end;background-color: #E41E12; color: white;">Yes
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row g-0" id="car_features" style="display: none;">
+                      <div class="row m-auto">
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Push Start</td>
+                              <td id="specs_car_pushstart"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">USB</td>
+                              <td id="specs_car_usb" style="text-align: end;background-color: #E41E12; color: white;">
+                                Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Bluetooth</td>
+                              <td id="specs_car_bluetooth"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">FM Radio</td>
+                              <td id="specs_car_fmradio"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Android Auto</td>
+                              <td id="specs_car_android"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Apple CarPlay</td>
+                              <td id="specs_car_apple" style="text-align: end;background-color: #E41E12; color: white;">
+                                Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Power Windows</td>
+                              <td id="specs_car_powerwindows"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">ABS</td>
+                              <td id="specs_car_abs" style="text-align: end;background-color: #E41E12; color: white;">
+                                Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Parking Sensors</td>
+                              <td id="specs_car_parkingsensors"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Front Airbags</td>
+                              <td id="specs_car_frontairbags"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Power Door Locks</td>
+                              <td id="specs_car_powerdoorlocks"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Rear Camera</td>
+                              <td id="specs_car_rearcamera"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Sunroof</td>
+                              <td id="specs_car_sunroof"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Cruise Control</td>
+                              <td id="specs_car_cruisecontrol"
+                                style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row g-0" id="includes" style="display: none;">
+                      <div class="row m-auto">
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Free Cancellation</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Unlimited Mileage</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Free Delivery</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">24/7 Customer Support</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">Yes</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="row g-0" id="requirements" style="display: none;">
+                      <div class="row m-auto">
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Minimum Age</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">21 Years</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Security Deposit</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">Personal Documents
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                        <table class=" table w-50">
+                          <tbody>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Payment</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">In Advance</td>
+                            </tr>
+                            <tr>
+                              <td style="background-color: #E41E12; color: white;">Payment Method</td>
+                              <td style="text-align: end;background-color: #E41E12; color: white;">All Methods</td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                  </div>
+                  <script>
+                    function specifications() {
+                      document.getElementById("specifications").style.display = "block"
+                      document.getElementById("car_features").style.display = "none"
+                      document.getElementById("includes").style.display = "none"
+                      document.getElementById("requirements").style.display = "none"
+                    }
+                    function car_features() {
+                      document.getElementById("specifications").style.display = "none"
+                      document.getElementById("car_features").style.display = "block"
+                      document.getElementById("includes").style.display = "none"
+                      document.getElementById("requirements").style.display = "none"
+                    }
+                    function includes() {
+                      document.getElementById("specifications").style.display = "none"
+                      document.getElementById("car_features").style.display = "none"
+                      document.getElementById("includes").style.display = "block"
+                      document.getElementById("requirements").style.display = "none"
+                    }
+                    function requirements() {
+                      document.getElementById("specifications").style.display = "none"
+                      document.getElementById("car_features").style.display = "none"
+                      document.getElementById("includes").style.display = "none"
+                      document.getElementById("requirements").style.display = "block"
+                    }
+                  </script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 my-5 ps-4">
+          <div class="row bg-body-secondary pb-5" style="border-radius: 1rem; ">
+            <div class="col-lg-12 text-end my-2">
+              <small class="my-5"><i class="bi bi-fire text-warning"></i> Hot Sale <i
+                  class="bi bi-star-fill text-danger"></i> Featured
+              </small>
+            </div>
+            <div class="col-lg-12">
+              <img src="images/car1"
+                class="img-fluid w-100 ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                id="card_image" style="border-radius: 1rem;">
+            </div>
+            <div class="col-lg-12">
+            </div>
+          </div>
+          <div class="row justify-content-center my-5">
+            <button type="button" style="border-radius: 2rem ;"
+              class="btn btn-outline-danger w-auto text-dark py-2 document fs-5 " data-bs-toggle="modal"
+              data-bs-target="#exampleModal" data-bs-whatever="@getboo tstrap"><i
+                class="bi bi-file-earmark text-danger"></i>Documents Required </button>
+            <div class="modal fade modal-lg modalll" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+              aria-hidden="true">
+              <div class="modal-dialog">
+                <div class="modal-content px-3 bg-body-tertiary">
+                  <div class="modal-header border-dark">
+                    <p class="modal-title fs-6 fw-semibold text-uppercase" id="exampleModalLabel"><i
+                        class="bi bi-file-earmark text-danger pe-2"></i>Documents Required</p>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                    <form>
+                      <div class="row justify-content-between">
+                        <small>You are eligible to rent a car across the emirates provided you have the below mentioned
+                          documents valid with you:
+                        </small>
+                        <div class="col-lg-6 d-flex justify-content-center bg-body-secondary px-0 my-3"
+                          style="width: 47.5%; border-radius: 1.5rem;">
+                          <div class="row" style="width: 98.5%;">
+                            <h5 class="text-center text-uppercase  bg-dark pt-3 text-white"
+                              style="border-radius: 3rem;width: 100%;">Resident & Pak Nationals</h5>
+                            <div class="col-lg-12">
+                              <ul>
+                                <li>Copy of Valid Pakistan Driving</li>
+                                <li>License Copy of Pakistan</li>
+                                <li>ID/Passport Copy (Only for Residents)</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="col-lg-6 d-flex justify-content-center bg-body-secondary px-0 my-3"
+                          style="width: 47.5%; border-radius: 1.5rem;">
+                          <div class="row" style="width: 98.5%;">
+                            <h5 class="text-center text-uppercase  bg-dark py-3 text-white"
+                              style="border-radius: 3rem;width: 100%;">Foreign Visitors</h5>
+                            <div class="col-lg-12">
+                              <ul>
+                                <li>Passport Copy</li>
+                                <li>Visa Copy</li>
+                                <li>Driving License</li>
+                                <li>International Driving Permit (IDP)</li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                        <small> Note:
+                          Visitors from the GCC, US, UK, Canada, Europe and some other countries can drive with their
+                          home country driving license, without the International Driving Permit (IDP).</small>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+  <!-- Footer -->
+  <section class="fw-semibold " style="background-color: black;">
+    <div class="container text-white py-5" style="background-color: black;">
+      <div class="row">
+        <div class="col">
+          <div class="col-lg-3">
+            <a class="nav-link" href="index.html">
+              <img src="images/Harmain Logo.png" class="img-fluid">
+            </a>
+          </div>
+          <p>The search for a luxury car is filled with high expectations. Undoubtedly, that has a lot to do with the
+            vehicles you are considering.
+          </p>
+          <p>Find Us:
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-whatsapp"></i>
+          </p>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="ContactUs.html">
+              <h6 class="fw-bold my-3"> CONTACT US</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>FOR BOOKINGS, CALL US:</h6>
+            <br>
+            <a class=" nav-link text-white" style="background-color: #E41E12; border-radius: 2rem ;"><i
+                class="bi bi-telephone"></i>
+              0324-2098644
+            </a><br>
+            <a class=" nav-link text-white" style="background-color: #E41E12; border-radius: 2rem ;"><i
+                class="bi bi-telephone"></i>
+              0312-2326896
+            </a><br>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="AboutUs.html">
+              <h6 class="fw-bold my-3"> ABOUT US</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>OUR LOCATION:</h6>
+            <br>
+            <a href="https://www.google.com/maps/place/HARMAIN+RENT+A+CAR/@24.9263856,67.1211846,15z/data=!4m6!3m5!1s0x3eb3391d5cf15887:0x1d73228d97d32c32!8m2!3d24.9350975!4d67.1366156!16s%2Fg%2F11f4m76z5x?entry=ttu"
+              class="nav-link"><span class="text-white px-3 "><i class="bi bi-geo-alt"></i> Shop 2 AL fatah arcade
+                gulistan-e-johar, Main University Rd, Block 4 mosimiyat, Karachi, Pakistan</span></a>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="OurFleet.html">
+              <h6 class="fw-bold my-3"> OUR FLEET</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>OUR BRANDS:</h6>
+            <br>
+            <span class="text-white px-3 text-center ">
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid border-top text-center text-white p-2">
+      © 2023. Copyrights HarmainRentACar All Rights Reserved.
+    </div>
+  </section>
+
+  <script>
+    let url_link = location.href;
+    let url = new URL(url_link)
+    let car_name = url.searchParams.get("car_name")
+    let model_year = url.searchParams.get("model_year")
+    let car_price_month = url.searchParams.get("car_price_month")
+    let car_price_week = url.searchParams.get("car_price_week")
+    let car_price_day = url.searchParams.get("car_price_day")
+    let card_image = url.searchParams.get("card_image")
+    let car_color = url.searchParams.get("car_color")
+    let car_engine = url.searchParams.get("car_engine")
+    let car_transmission = url.searchParams.get("car_transmission")
+    let car_make = url.searchParams.get("car_make")
+    let car_body_type = url.searchParams.get("car_body_type")
+    let car_fuel = url.searchParams.get("car_fuel")
+    let car_int_color = url.searchParams.get("car_int_color")
+    let car_ac = url.searchParams.get("car_ac")
+    let push_start = url.searchParams.get("push_start")
+    let usb = url.searchParams.get("usb")
+    let bluetooth = url.searchParams.get("bluetooth")
+    let fm_radio = url.searchParams.get("fm_radio")
+    let android_auto = url.searchParams.get("android_auto")
+    let apple_carplay = url.searchParams.get("apple_carplay")
+    let power_windows = url.searchParams.get("power_windows")
+    let abs = url.searchParams.get("abs")
+    let parking_sensors = url.searchParams.get("parking_sensors")
+    let front_airbags = url.searchParams.get("front_airbags")
+    let power_door_locks = url.searchParams.get("power_door_locks")
+    let rear_camera = url.searchParams.get("rear_camera")
+    let sunroof = url.searchParams.get("sunroof")
+    let cruise_control = url.searchParams.get("cruise_control")
+    let category = url.searchParams.get("category")
+    let modal_name = url.searchParams.get("modal_name")
+    let modal_namee = url.searchParams.get("modal_namee")
+    let modal_model_year = url.searchParams.get("modal_model_year")
+
+    document.getElementById("car_name").innerHTML = car_name;
+    document.getElementById("model_year").innerHTML = model_year;
+    document.getElementById("car_price_month").innerHTML = car_price_month;
+    document.getElementById("car_price_week").innerHTML = car_price_week;
+    document.getElementById("car_price_day").innerHTML = car_price_day;
+    document.getElementById("specs_model_year").innerHTML = model_year;
+    document.getElementById("specs_car_color").innerHTML = car_color;
+    document.getElementById("specs_car_engine").innerHTML = car_engine;
+    document.getElementById("specs_car_transmission").innerHTML = car_transmission;
+    document.getElementById("specs_car_make").innerHTML = car_make;
+    document.getElementById("specs_car_int_color").innerHTML = car_int_color;
+    document.getElementById("specs_car_fuel").innerHTML = car_fuel;
+    document.getElementById("specs_car_body_type").innerHTML = car_body_type;
+    document.getElementById("specs_car_ac").innerHTML = car_ac;
+    document.getElementById("specs_car_pushstart").innerHTML = push_start;
+    document.getElementById("specs_car_usb").innerHTML = usb;
+    document.getElementById("specs_car_bluetooth").innerHTML = bluetooth;
+    document.getElementById("specs_car_fmradio").innerHTML = fm_radio;
+    document.getElementById("specs_car_android").innerHTML = android_auto;
+    document.getElementById("specs_car_apple").innerHTML = apple_carplay;
+    document.getElementById("specs_car_powerwindows").innerHTML = power_windows;
+    document.getElementById("specs_car_abs").innerHTML = abs;
+    document.getElementById("specs_car_parkingsensors").innerHTML = parking_sensors;
+    document.getElementById("specs_car_frontairbags").innerHTML = front_airbags;
+    document.getElementById("specs_car_powerdoorlocks").innerHTML = power_door_locks;
+    document.getElementById("specs_car_rearcamera").innerHTML = rear_camera;
+    document.getElementById("specs_car_sunroof").innerHTML = sunroof;
+    document.getElementById("specs_car_cruisecontrol").innerHTML = cruise_control;
+    document.getElementById("modal_name").innerHTML = car_name;
+    document.getElementById("modal_namee").innerHTML = car_name;
+    document.getElementById("modal_model_year").innerHTML = model_year
+  </script>
+  <!-- <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,456 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harmain Rent A Car | Car Rental Service</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <section>
+    <!-- Login Form -->
+    <div class="modal fade" id="login" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog bg-body-dark p-5" style="border-radius: 4.5rem;">
+        <div class="modal-content bg-body-tertiary">
+          <div class="modal-header justify-content-center border-dark">
+            <div class="row w-100">
+              <button type="button" class="btn-close pt-2 " data-bs-dismiss="modal" aria-label="Close"></button>
+              <h4>LOG IN</h4>
+              <form class="py-2">
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input type="email" class="form-control bg-body-tertiary"
+                      style="border-left: 0; border-radius:0 1rem 1rem 0;" required>
+                  </div>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="my-2">
+                  <label for="exampleInputPassword1" class="form-label fw-semibold">Password</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-lock"></i>
+                    </span>
+                    <input type="password" class="form-control bg-body-tertiary"
+                      style="border-right: 0;border-left: 0 ;" id="Password" required>
+                    <span class="input-group-text"
+                      style="cursor: pointer; border-left: 0; border-radius: 0 1rem 1rem 0;">
+                      <i id="eye" class="bi bi-eye" onclick="showPassword()"></i>
+                      <i id="eye-slash" class="bi bi-eye-slash" onclick="showPassword()" style="display: none;"></i>
+                    </span>
+                  </div>
+                  <div id="emailHelp" class="form-text"><a href="">Forget Password?</a></div>
+                  <script>
+                    function showPassword() {
+                      let x1 = document.getElementById("Password")
+                      let y1 = document.getElementById("eye")
+                      let z1 = document.getElementById("eye-slash")
+                      if (x.type === "password") {
+                        x.type = "text"
+                        y.style.display = "none"
+                        z.style.display = "block"
+                      } else {
+                        x.type = "password"
+                        y.style.display = "block"
+                        z.style.display = "none"
+                      }
+                    }
+                  </script>
+                </div>
+                <div class="text-center my-2 pt-2">
+                  <button type="submit" class="btn btn-lg fs-6"
+                    style="background-color: #E41E12;color: white; border-radius: 2rem;">Log
+                    In</button>
+                </div>
+                <div class="text-center my-2">
+                  <small id="emailHelp" class="form-text">Dont't have an account?<span><a
+                        href="SignUp.html">SignUp</a></span> </small>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-0">
+      <div class="container-fluid gradient" style="position: relative; padding:0 4rem 0 4rem; ">
+        <div class="row gx-5 w-100">
+          <div class="col-lg-6 d-flex justify-content-start">
+            <a class="navbar-brand ps-5" href="index.html">
+              <img src="images/harmain.png" style="height: 5rem;"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-end">
+            <div class="row">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1 " href="AboutUs.html" style="color: white;">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1" href="OurFleet.html" style="color: white;">OUR FLEET</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link fw-semibold px-1  dropdown-toggle" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                      CATEGORIES
+                    </a>
+                    <ul class="dropdown-menu border-0 gradient">
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=economy">Economy</a></li>
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=standard">Standard</a></li>
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=luxury">Luxury</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1  " href="ContactUs.html" style="color: white;">CONTACT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link fw-semibold px-1  pe-0" data-bs-toggle="modal"
+                      data-bs-target="#login" style="color: white;">
+                      LOGIN</button>
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1 P-0" href="" style="color: white;">
+                      |
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ps-0 fw-semibold" href="SignUp.html" style="color: white;"> SIGNUP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- Banner -->
+  <section>
+    <div class="container-fluid bg-body-tertiary" style="margin-top: 7.5rem;">
+      <div class="container py-5 my-5">
+        <div class="row py-4">
+          <div class="col-lg-5">
+            <h2 class="fw-bold m-0">Empowering Journeys,</h2>
+            <h2 class="fw-bold mt-0" style="color: #E41E12;">Embracing Luxury</h2>
+            <p class="my-3">Luxury Reimagined for You
+            </p>
+            <p class="my-3">Step into a world of luxury reimagined with <span class="fw-semibold">Harmain Rent A
+                Car</span>. Dive into the charm of top-tier brands, combined with our unwavering commitment to
+              exceptional service. Let us ignite your passion for adventure as you cruise through the city in unmatched
+              style.
+            </p>
+          </div>
+          <div class="col-lg-7">
+            <img src="images/banner5.webp"
+              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- About Us -->
+  <section>
+    <div class="container-fluid my-5 ">
+      <div class="row">
+        <div class="col-lg-6 pt-4" style="padding-left: 6.5rem;">
+          <div class="container">
+            <h5>Who are we?</h5>
+            <h2 class="fw-bold">About <span style="color: #E41E12;"> Harmain </span> Rent A Car</h2>
+            <p style="width: 90%;"> Established in 2018,<span class="fw-semibold">Harmain Rent A Car</span> has charted
+              a remarkable journey to become a trailblazer in the Karachi’s car rental industry. Our passion for luxury,
+              combined with a relentless commitment to excellence, has propelled us to the forefront of the market.
+              <br><br>
+              Driven by a core set of values, we believe in the power of a diverse and dedicated team, working together
+              to provide the highest level of customer service. With honesty and integrity at our core, we forge lasting
+              relationships with our valued clients, enriching the social fabric of the communities we serve.<br><br>
+              As a dependable and client-focused company, our reputation precedes us. We pride ourselves on delivering
+              upscale services, offering an extensive fleet of the most sought-after vehicles.We ensure luxury is
+              effortlessly accessible wherever your journey takes you.
+              <br><br>
+              At <span class="fw-semibold">Harmain Rent A Car</span>, we curate unforgettable experiences. Our
+              commitment to excellence has earned the loyalty of countless customers, solidifying our position as the
+              preferred choice for luxury car rentals in Karachi. With every drive, we redefine luxury, making each
+              journey an extraordinary one.
+            </p>
+          </div>
+        </div>
+        <div class="col-lg-6 py-3" style="background-color: #E41E12;color: white; border-radius: 2rem 0 0 2rem;">
+          <div class="row py-5 px-4">
+            <h2 class="fw-bold text-uppercase">WHY BOOK WITH Harmain Rent A Car?</h2>
+            <div class="row my-3">
+              <div class="col-lg-1 ">
+                <i class="bi bi-check-circle text-white fs-1"></i>
+              </div>
+              <div class="col">
+                <h5 class="fw-bold">Credibility
+                </h5>
+                <small class="fw-semibold">With an extensive track record that speaks volumes, we've consistently
+                  delivered excellence, earning us the prestigious standing of being the most relied upon luxury car
+                  rental service. Your trust fuels our legacy of unmatched service.
+                </small>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-lg-1 ">
+                <i class="bi bi-check-circle text-white fs-1"></i>
+              </div>
+              <div class="col">
+                <h5 class="fw-bold">Luxury Redefined
+                </h5>
+                <small class="fw-semibold">Elevate your every ride with our carefully curated fleet of exceptional
+                  vehicles. Immerse yourself in the embodiment of elegance as you take command of the road in our
+                  meticulously selected premium cars, making every drive an ode to opulence.
+                </small>
+              </div>
+            </div>
+            <div class="row my-3">
+              <div class="col-lg-1 ">
+                <i class="bi bi-check-circle text-white fs-1"></i>
+              </div>
+              <div class="col">
+                <h5 class="fw-bold">Affordability without Compromise
+                </h5>
+                <small class="fw-semibold">Elevate your every ride with our carefully curated fleet of exceptional
+                  vehicles. Immerse yourself in the embodiment of elegance as you take command of the road in our
+                  meticulously selected premium cars, making every drive an ode to opulence.
+                </small>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Cards -->
+  <section>
+    <div class="container my-5 py-5">
+      <div class="row">
+        <div class="col">
+          <div class="saleint-features border-0 px-5 py-5" style="border-radius: 2rem; height: 20rem;">
+            <div class="card-body">
+              <i class="bi bi-tools fs-1"></i>
+              <h6 class="card-title fw-bold my-2" style="color: #E41E12;">No Maintenance Charges</h6>
+              <p class="fw-semibold" style="line-height: 140%; font-size: small;">We cover all maintenance costs, so you
+                can embark on your journey with complete peace of mind.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="saleint-features border-0 px-5 py-5" style="border-radius: 2rem; height: 20rem;">
+            <div class="card-body">
+              <i class="bi bi-file-earmark-text fs-1"></i>
+              <h6 class="card-title fw-bold my-2" style="color: #E41E12;">Transparent Policy</h6>
+              <p class="fw-semibold" style="line-height: 140%; font-size: small;">Our commitment to transparency ensures
+                that you have a clear understanding of all terms and conditions, guaranteeing a hassle-free experience.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="saleint-features border-0 px-5 py-5" style="border-radius: 2rem; height: 20rem;">
+            <div class="card-body">
+              <i class="bi bi-wallet2 fs-1"></i>
+              <h6 class="card-title fw-bold my-2" style="color: #E41E12;">No Hidden Charges</h6>
+              <p class="fw-semibold" style="line-height: 140%; font-size: small;">We believe in upfront pricing,
+                providing you with complete confidence that there are no unexpected surprises.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="saleint-features border-0 px-5 py-5" style="border-radius: 2rem; height: 20rem;">
+            <div class="card-body">
+              <i class="bi bi-cash-coin fs-1"></i>
+              <h6 class="card-title fw-bold my-2" style="color: #E41E12;">Affordable Car Rental Rates</h6>
+              <p class="fw-semibold" style="line-height: 140%; font-size: small;">Enjoy the opulence of luxury at
+                affordable rates, allowing you to savor every moment without exceeding your budget.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Mission & Vision -->
+  <section>
+    <div class="container-fluid px-0 my-5 py-5">
+      <div class="row py-4 mb-4 g-0">
+        <div class="col" style="margin-left: 7.5rem;">
+          <h2 class="fw-bold mt-0" style="color: #E41E12;">Our Mission</h2>
+          <h3 class="fw-bold m-0">UNLEASHING FREEDOM, REDEFINING JOURNEYS</h3>
+          <p class="my-3">At Harmain Rent A Car, we empower you with the freedom to embark on unforgettable journeys.
+            With a relaxed, friendly, and professional approach, we provide flexible solutions tailored to your specific
+            requirements. Our hassle-free booking process ensures smooth travels, redefining luxury every step of the
+            way.
+          </p>
+        </div>
+        <div class="col p-0">
+          <img src="images/revoo.png"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+            style="max-width: max-content;">
+        </div>
+      </div>
+      <div class="row py-4 mt-4 g-0">
+        <div class="col">
+          <img src="images/fortunerr1.png"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+            style="max-width: max-content;">
+        </div>
+        <div class="col text-end" style="margin-right: 7.5rem">
+          <h2 class="fw-bold mt-0" style="color: #E41E12;">Our Vision</h2>
+          <h3 class="fw-bold m-0">LEADING THE ROAD AHEAD, GLOBALLY
+          </h3>
+          <p class="my-3">Harmain Rent ACar aims to be a pioneering leader in Karachi’s car rental sector and expand our
+            reach globally. We strive for excellence by offering modern, well-maintained vehicles with competitive
+            rates, ensuring your peace of mind. As we grow, we aspire to become the one-stop-shop for all vehicle rental
+            needs.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Our Locations -->
+  <section>
+    <div class="container px-0 ">
+      <div class="row py-4 mb-4">
+        <h2 class="fw-bold mt-0 tex ">OUR LOCATION</h2>
+        <div class="col-lg-6 my-auto">
+          <div class="row">
+
+            <div class="col-lg-1">
+            </div>
+            <div class="col-lg-11">
+              <h3>KARACHI</h3>
+            </div>
+            <div class="col-lg-1">
+              <i class="bi-geo-alt fs-3 " style="color: #E41E12;"></i>
+            </div>
+            <div class="col-lg-11">
+              <p>
+                Shop 2 AL fatah arcade gulistan-e-johar, Main University Rd, Block 4 mosimiyat, Karachi, Pakistan</p>
+            </div>
+            <div class="col-lg-1">
+              <i class="bi-telephone fs-3 me-2" style="color: #E41E12;"></i>
+            </div>
+            <div class="col-lg-11">
+              <p>
+                +92 324-2092644</p>
+            </div>
+            <div class="col-lg-1">
+              <i class="bi-envelope fs-3 me-2" style="color: #E41E12;"></i>
+            </div>
+            <div class="col-lg-11 ">
+              <p>
+                info@harmainrentacar.com</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <img src="images/civic.png"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <section class="fw-semibold " style="background-color: black;">
+    <div class="container text-white py-5" style="background-color: black;">
+      <div class="row">
+        <div class="col">
+          <div class="col-lg-3">
+            <a class="nav-link" href="index.html">
+              <img src="images/Harmain Logo.png"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+            </a>
+          </div>
+          <p>The search for a luxury car is filled with high expectations. Undoubtedly, that has a lot to do with the
+            vehicles you are considering.
+          </p>
+          <p>Find Us:
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-whatsapp"></i>
+          </p>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="ContactUs.html">
+              <h6 class="fw-bold my-3"> CONTACT US</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>FOR BOOKINGS, CALL US:</h6>
+            <br>
+            <a class=" nav-link text-white" style="background-color: #E41E12; border-radius: 2rem ;"><i
+                class="bi bi-telephone"></i>
+              0324-2098644
+            </a><br>
+            <a class=" nav-link text-white" style="background-color: #E41E12; border-radius: 2rem ;"><i
+                class="bi bi-telephone"></i>
+              0312-2326896
+            </a><br>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="AboutUs.html">
+              <h6 class="fw-bold my-3"> ABOUT US</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>OUR LOCATION:</h6>
+            <br>
+            <a href="https://www.google.com/maps/place/HARMAIN+RENT+A+CAR/@24.9263856,67.1211846,15z/data=!4m6!3m5!1s0x3eb3391d5cf15887:0x1d73228d97d32c32!8m2!3d24.9350975!4d67.1366156!16s%2Fg%2F11f4m76z5x?entry=ttu"
+              class="nav-link"><span class="text-white px-3 "><i class="bi bi-geo-alt"></i> Shop 2 AL fatah arcade
+                gulistan-e-johar, Main University Rd, Block 4 mosimiyat, Karachi, Pakistan</span></a>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="OurFleet.html">
+              <h6 class="fw-bold my-3"> OUR FLEET</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>OUR BRANDS:</h6>
+            <br>
+            <span class="text-white px-3 text-center ">
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid border-top text-center text-white p-2">
+      © 2023. Copyrights HarmainRentACar All Rights Reserved.
+    </div>
+  </section>
+
+  <!-- <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

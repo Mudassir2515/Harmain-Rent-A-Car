@@ -1,0 +1,289 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Harmain Rent A Car | Car Rental Service</title>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="bootstrap-5.3.2-dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="bootstrap-icons-1.11.2/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <section>
+    <!-- Login Form -->
+    <div class="modal fade" id="login" tabindex="-1" aria-hidden="true">
+      <div class="modal-dialog bg-body-dark p-5" style="border-radius: 4.5rem;">
+        <div class="modal-content bg-body-tertiary">
+          <div class="modal-header justify-content-center border-dark">
+            <div class="row w-100">
+              <button type="button" class="btn-close pt-2 " data-bs-dismiss="modal" aria-label="Close"></button>
+              <h4>LOG IN</h4>
+              <form class="py-2">
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input type="email" class="form-control bg-body-tertiary"
+                      style="border-left: 0; border-radius:0 1rem 1rem 0;" required>
+                  </div>
+                  <div id="emailHelp" class="form-text">We'll never share your email with anyone else.
+                  </div>
+                </div>
+                <div class="my-2">
+                  <label for="exampleInputPassword1" class="form-label fw-semibold">Password</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-lock"></i>
+                    </span>
+                    <input type="password" class="form-control bg-body-tertiary"
+                      style="border-right: 0;border-left: 0 ;" id="Password" required>
+                    <span class="input-group-text"
+                      style="cursor: pointer; border-left: 0; border-radius: 0 1rem 1rem 0;">
+                      <i id="eye" class="bi bi-eye" onclick="showPassword()"></i>
+                      <i id="eye-slash" class="bi bi-eye-slash" onclick="showPassword()" style="display: none;"></i>
+                    </span>
+                  </div>
+                  <div id="emailHelp" class="form-text"><a href="">Forget Password?</a></div>
+                  <script>
+                    function showPassword() {
+                      let x1 = document.getElementById("Password")
+                      let y1 = document.getElementById("eye")
+                      let z1 = document.getElementById("eye-slash")
+                      if (x.type === "password") {
+                        x.type = "text"
+                        y.style.display = "none"
+                        z.style.display = "block"
+                      } else {
+                        x.type = "password"
+                        y.style.display = "block"
+                        z.style.display = "none"
+                      }
+                    }
+                  </script>
+                </div>
+                <div class="text-center my-2 pt-2">
+                  <button type="submit" class="btn btn-lg fs-6"
+                    style="background-color: #E41E12;color: white; border-radius: 2rem;">Log
+                    In</button>
+                </div>
+                <div class="text-center my-2">
+                  <small id="emailHelp" class="form-text">Dont't have an account?<span><a
+                        href="SignUp.html">SignUp</a></span> </small>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <nav class="navbar navbar-expand-lg fixed-top bg-body-tertiary p-0">
+      <div class="container-fluid gradient" style="position: relative; padding:0 4rem 0 4rem; ">
+        <div class="row gx-5 w-100">
+          <div class="col-lg-6 d-flex justify-content-start">
+            <a class="navbar-brand ps-5" href="index.html">
+              <img src="images/harmain.png" style="height: 5rem;"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}" alt="">
+            </a>
+          </div>
+          <div class="col-lg-6 d-flex justify-content-end">
+            <div class="row">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+                aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1 " href="AboutUs.html" style="color: white;">ABOUT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1" href="OurFleet.html" style="color: white;">OUR FLEET</a>
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a class="nav-link fw-semibold px-1  dropdown-toggle" href="#" role="button"
+                      data-bs-toggle="dropdown" aria-expanded="false" style="color: white;">
+                      CATEGORIES
+                    </a>
+                    <ul class="dropdown-menu border-0 gradient">
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=economy">Economy</a></li>
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=standard">Standard</a></li>
+                      <li><a class="navdropdown dropdown-item text-white catagory-hover fw-semibold"
+                          href="category.html?category=luxury">Luxury</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1  " href="ContactUs.html" style="color: white;">CONTACT US</a>
+                  </li>
+                  <li class="nav-item">
+                    <button type="button" class="nav-link fw-semibold px-1  pe-0" data-bs-toggle="modal"
+                      data-bs-target="#login" style="color: white;">
+                      LOGIN</button>
+
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link fw-semibold px-1 P-0" href="" style="color: white;">
+                      |
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link ps-0 fw-semibold" href="SignUp.html" style="color: white;"> SIGNUP</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+  <!-- Contact Us -->
+  <section>
+    <div class="container mt-5">
+      <div class="row">
+        <div class="container mt-5">
+          <h2 class="fw-bold text-uppercase mt-5 mx-auto text text-center ">Contact Us</h2>
+          <div class="row">
+            <div class="container my-5 bg-dark text-white p-5" style="border-radius: 2rem;">
+              <div class="row">
+                <h2 class="fw-bold mb-4"> Get in Touch! <span class="fw-semibold"> Feel Free To Ask! </span></h2>
+                <p>One of our representatives will get back to you shortly.
+                </p>
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Name</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-person"></i>
+                    </span>
+                    <input type="text" class="form-control bg-body-tertiary"
+                      style="border-left: 0; border-radius:0 1rem 1rem 0;" required>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Email</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-envelope"></i>
+                    </span>
+                    <input type="email" class="form-control bg-body-tertiary"
+                      style="border-left: 0; border-radius:0 1rem 1rem 0;" required>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Phone</label>
+                  <div class="input-group has-validation">
+                    <span class="input-group-text" style=" border-right: 0; border-radius:  1rem 0 0 1rem ;">
+                      <i class="bi bi-telephone"></i>
+                    </span>
+                    <input type="number" class="form-control bg-body-tertiary"
+                      style="border-left: 0; border-radius:0 1rem 1rem 0;" required>
+                  </div>
+                </div>
+                <div class="my-2">
+                  <label class="form-label fw-semibold">Message</label>
+                  <div class="input-group has-validation">
+                    <textarea style="border-radius: 1rem;" cols="300" rows="7"></textarea>
+                  </div>
+                </div>
+                <div class="col-lg-3 my-3">
+                  <a href="ThankYouInquiry.html">
+                    <button type="submit" class="btn text-uppercase fw-semibold mt-4"
+                      style="border-radius: 2rem;background-color: #E41E12; color: white;">Contact Us</button></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <section class="fw-semibold " style="background-color: black;">
+    <div class="container text-white py-5" style="background-color: black;">
+      <div class="row">
+        <div class="col">
+          <div class="col-lg-3">
+            <a class="nav-link" href="index.html">
+              <img src="images/Harmain Logo.png" class="img-fluid">
+            </a>
+          </div>
+          <p>The search for a luxury car is filled with high expectations. Undoubtedly, that has a lot to do with the
+            vehicles you are considering.
+          </p>
+          <p>Find Us:
+            <i class="bi bi-facebook"></i>
+            <i class="bi bi-instagram"></i>
+            <i class="bi bi-whatsapp"></i>
+          </p>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="ContactUs.html">
+              <h6 class="fw-bold my-3"> CONTACT US</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>FOR BOOKINGS, CALL US:</h6>
+            <br>
+            <a class=" nav-link text-white" style="background-color: #E41E12; border-radius: 2rem ;"><i
+                class="bi bi-telephone"></i>
+              0324-2098644
+            </a><br>
+            <a class=" nav-link text-white" style="background-color: #E41E12; border-radius: 2rem ;"><i
+                class="bi bi-telephone"></i>
+              0312-2326896
+            </a><br>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="AboutUs.html">
+              <h6 class="fw-bold my-3"> ABOUT US</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>OUR LOCATION:</h6>
+            <br>
+            <a href="https://www.google.com/maps/place/HARMAIN+RENT+A+CAR/@24.9263856,67.1211846,15z/data=!4m6!3m5!1s0x3eb3391d5cf15887:0x1d73228d97d32c32!8m2!3d24.9350975!4d67.1366156!16s%2Fg%2F11f4m76z5x?entry=ttu"
+              class="nav-link"><span class="text-white px-3 "><i class="bi bi-geo-alt"></i> Shop 2 AL fatah arcade
+                gulistan-e-johar, Main University Rd, Block 4 mosimiyat, Karachi, Pakistan</span></a>
+          </div>
+        </div>
+        <div class="col text-center">
+          <div class="row border-bottom">
+            <a class="navbar-brand" href="OurFleet.html">
+              <h6 class="fw-bold my-3"> OUR FLEET</h6>
+            </a>
+          </div>
+          <div class="col p-2">
+            <h6>OUR BRANDS:</h6>
+            <br>
+            <span class="text-white px-3 text-center ">
+
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid border-top text-center text-white p-2">
+      © 2023. Copyrights HarmainRentACar All Rights Reserved.
+    </div>
+  </section>
+
+  <!-- <script src="bootstrap-5.3.2-dist/js/bootstrap.min.js"></script> -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+    integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
